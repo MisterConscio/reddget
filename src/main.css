@@ -1,0 +1,92 @@
+html {
+  color-scheme: dark ;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+form * {
+  font-size: 1.15rem;
+}
+
+form input[type=text] {
+  padding: 4px 8px;
+}
+
+.form-group > * {
+  margin-inline: 0.25em;
+}
+
+main {
+  width: min(90ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  justify-content: center;
+}
+
+.error-msg {
+  text-align: center;
+  color: red;
+  font-size: 1.25rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay > img {
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.overlay button {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  background: none;
+  border: none;
+  font-weight: bold;
+}
+
+.overlay-open {
+  overflow: hidden;
+}
+
+@media (width < 767px) {
+  .img-gallery {
+  grid-template-columns: auto;
+  }
+}
